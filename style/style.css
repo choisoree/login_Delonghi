@@ -1,0 +1,572 @@
+@charset "UTF-8";
+
+* {
+    color: #333;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {text-decoration: none;}
+a:link       {  color: #333;  }
+a:visited    {  color: #333;  }
+a:hover      {  color: #222;  }
+a:active     {  color: #222;  }
+
+img      {  vertical-align: middle;  }
+
+ul {
+    list-style: none;
+}
+
+
+/*안내선*/
+/*div#wrap {border: 1px solid #000;}*/
+/*header#header {border: 1px solid #fff;}*/
+/*main#main {border: 1px solid #000;}*/
+/*footer#footer {border: 1px solid #000;}*/
+
+
+
+
+/*header#header 시작*/
+header#header {
+    width: 100%;
+    height: 120px;
+    background-color: #0c2645;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+#header div#innerheader {
+    width: 1360px;
+    margin: 0 auto;
+    display: flex;
+
+    justify-content: space-between;
+    position: relative;
+}
+
+#header #innerheader #logo {
+    width: 270px;
+    line-height: 120px;
+}
+
+    /*gnb 메뉴*/
+#innerheader nav#gnb {
+    width: 760px;
+    text-align: center;
+}
+
+#gnb ul#mainmenu {
+    display: inline-block;
+}
+
+#gnb ul#mainmenu>li {
+    float: left;
+}
+
+#gnb ul#mainmenu>li>a {
+    padding-top: 45px;
+    padding-bottom: 43px;
+}
+
+#gnb ul#mainmenu>li:not(:first-child){
+    margin-left: 80px;
+}
+
+#gnb a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#gnb .submenu {
+
+    display: none;
+    position: absolute;
+    top: 110px;
+
+    z-index:1;
+}
+
+#gnb .subposition {
+    position: absolute;
+    left: 600px;
+    z-index: 1;
+}
+
+
+#gnb .submenu .subLi>a {
+    color: #333;
+    font-weight: bold;
+    padding-right:70px;
+    padding-top: 30px;
+}
+
+#gnb .submenu>li{
+    float: left;
+
+}
+
+#gnb .submenulist {
+    text-align: left;
+}
+
+#gnb .submenulist .listLi a {
+    color: #666;
+    padding-top: 15px;
+    padding-right: 70px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+#gnb li:hover>a {
+    color: #3289e8;
+    border-bottom: 8px solid #3289e8;
+}
+
+#gnb .submenu .subLi:hover>a {
+    color: #3289e8;
+    border-bottom: none;
+}
+
+#gnb .submenulist .listLi:hover>a {
+    color: #3289e8;
+    border-bottom: none;
+}
+    /*gnb 메뉴*/
+
+
+    /*헤더 아이콘*/
+#innerheader #hdicon {
+    width: 270px;
+    text-align: center;
+}
+
+#hdicon ul#hdlnb {
+    margin-top: 40px;
+    display: flex;
+    display: inline-block;
+}
+
+#hdicon ul#hdlnb a {
+    width: 100%;
+    height: 35px;
+    display: inline-block;
+}
+
+#hdicon ul#hdlnb li {
+    width: 45px;
+    float: left;
+    display: inline-block;
+}
+
+#hdicon ul#hdlnb li:last-child {
+    width: 75px;
+    display: inline-block;
+}
+
+#hdicon ul#hdlnb li:not(:last-child){
+    margin-left: 12px;
+}
+
+
+#hdicon a span {
+    color: #fff;
+    font-size: 11px;
+    display: inline-block;
+}
+
+
+#hdicon a span:first-child {
+    width: 35px;
+    height: 35px;
+}
+
+
+#hdicon span#loginIcon {
+    background-image: url(../images/icon_login.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+#hdicon span#cartIcon {
+    background-image: url(../images/icon_cart.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hdicon span#joinIcon {
+    background-image: url(../images/icon_join.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hdicon span#orderIcon {
+    background-image: url(../images/icon_shipping.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hdicon span:last-child{
+    padding-top: 4px;
+    padding-bottom: 17px;
+    border-bottom: 5px solid #3289e8;
+    display: none;
+}
+
+#hdicon a:hover span:last-child{
+    display: block;
+}
+
+    /*헤더 아이콘*/
+/*header#header 끝*/
+
+
+
+/*gnb 메뉴 배경*/
+div#submenuBG {
+    margin-top: 20px;
+    position: relative;
+    top: -20px;
+    z-index: 2;
+    display: none;
+}
+
+div#subBGlayout {
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+
+    position: fixed;
+}
+/*gnb 메뉴 배경*/
+
+
+
+/*main#main 시작*/
+main#main {
+    width: 1130px;
+    margin: 0 auto;
+    margin-top: 140px;
+}
+
+#main #homelogin ul{
+    margin-bottom: 20px;
+    display: flex;
+}
+#main #homelogin ul li {
+    margin-right: 25px;
+}
+#main #homelogin ul li:nth-child(2){
+    font-weight: bold;
+}
+
+#main #login {
+     text-align: center;
+}
+
+
+#main #login h1{
+    font-size: 50px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #000;
+}
+
+
+#main #login p {
+    margin: 50px 0;
+    font-size: 21px;
+
+    display: inline-block;
+}
+
+/*멀티탭 시작*/
+
+#login #loginmethod .loginselectBtn {
+    color: #777;
+    width: 364px;
+    font-size: 17px;
+    padding: 18px 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+}
+
+#login #loginmethod .loginselectBtn:first-child {
+    color: #3289e8;
+    border: 1px solid #3289e8;
+    border-bottom: none;
+    position: relative;
+    left: 3px;
+
+/*    z-index: 10px;*/
+}
+
+#login #loginmethod .loginselectBtn:nth-child(2){
+    border-bottom:1px solid #3289e8;
+    border-left: 1px solid #3289e8;
+    position: relative;
+    right: 4px;
+}
+/*멀티탭 끝*/
+
+
+/*로그인 영역 시작*/
+#login #loginmethod table{
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+
+#loginmethod tr td:first-child{
+    padding-bottom: 10px;
+    padding-right: 15px;
+}
+
+#loginmethod input {
+    width: 460px;
+    border: none;
+    font-size: 17px;
+    padding: 16px 18px;
+    border: 1px solid #ccc;
+    outline-color: #3289e8;
+}
+
+
+
+#loginmethod button.loginBtn {
+    border: none;
+    color: #fff;
+    background-color: #3289e8;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 120px;
+
+    font-size: 20px;
+    outline-color: #3289e8;
+}
+
+#loginmethod #tabcontent2 {
+    display: none;
+}
+
+
+#account span#loginTxt {
+    color: #555;
+    width: 730px;
+    font-size: 15px;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 90px;
+    display: inline-block;
+}
+/*로그인 영역 끝*/
+
+
+/*회원가입, 아이디/비밀번호 찾기*/
+#account #member {
+    width: 730px;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 180px;
+}
+
+ul#memmainmenu {
+    padding-right: 25px;
+    display: flex;
+/*    border: 1px solid #000;*/
+}
+
+ul#memmainmenu a {
+    width: 100%;
+    height: 70px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+ul#memmainmenu>li{
+    text-align: center;
+/*    border: 1px solid #000;*/
+}
+
+ul#memmainmenu>li:nth-child(2n+1) {
+    flex:1;
+}
+
+#memmainmenu>li:nth-child(2n+1) span {
+    line-height: 70px;
+/*    border: 1px solid #000;*/
+    display: inline-block;
+}
+
+#memmainmenu>li:nth-child(2n+1) span:first-child {
+    width: 70px;
+}
+
+#memmainmenu>li:nth-child(2n+1) span:last-child {
+    padding-left: 20px;
+}
+
+#memmainmenu>li:nth-child(2n) span {
+    line-height: 70px;
+}
+
+#memmainmenu span#memjoinicon {
+
+    border-radius: 70px;
+    background-image: url(../images/icon01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+#memmainmenu a:hover span#memjoinicon {
+    background-color: #3289e8;
+    background-image: url(../images/icon01_on.png);
+}
+
+
+ul#memmainmenu span#memIDicon {
+    border-radius: 70px;
+    background-image: url(../images/icon02.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+ul#memmainmenu a:hover span#memIDicon {
+    background-color: #3289e8;
+    background-image: url(../images/icon02_on.png);
+}
+
+ul#memmainmenu span#memPWicon {
+    border-radius: 70px;
+    background-image: url(../images/icon03.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+ul#memmainmenu a:hover span#memPWicon {
+    background-color: #3289e8;
+    background-image: url(../images/icon03_on.png);
+}
+
+
+#memmainmenu>li:nth-child(2n+1) a:hover{
+    color: #3289e8;
+}
+#memmainmenu span:hover {
+    color: #3289e8;
+}
+
+/*회원가입, 아이디/비밀번호 찾기*/
+/*main#main 끝*/
+
+
+
+
+
+
+
+/*footer#footer*/
+footer#footer {
+    width: 100%;
+    height: 300px;
+    background-color: #0c2645;
+}
+
+#footer #ftterms {
+    height: 110px;
+    margin: 0 auto;
+    text-align: center;
+}
+#footer ul#footergnb{
+    width: 420px;
+    line-height: 110px;
+
+    display: inline-block;
+}
+
+
+#footer #ftterms ul li{
+    float: left;
+}
+
+#footer #ftterms ul li:not(li:last-child) {
+    margin-right: 40px;
+}
+
+
+#footer #ftterms ul li a {
+    color: #fff;
+    font-weight: bold;
+
+}
+#footer #ftterms ul li a img {
+    padding: 3px 8px;
+}
+
+#footer #footerlogo {
+    padding: 25px 0;
+    text-align: center;
+}
+
+#footer #copright {
+    color: #646a75;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+}
+/*footer#footer 끝*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
